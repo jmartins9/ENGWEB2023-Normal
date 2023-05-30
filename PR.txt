@@ -17,7 +17,7 @@
         'U.F. Cascais e Estoril'
         ]
         Para remover a string, caso seja pretendido vazia basta aplicar um filter da seguinte forma:
-        db.plantas.distinct("Freguesia").sort().filte(f => f !== '')
+        db.plantas.distinct("Freguesia").sort().filter(f => f !== '')
 
    .4 db.plantas.aggregate([{ $group : { _id : "$Freguesia", registos : { $sum : 1 } } }])
         [

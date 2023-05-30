@@ -11,7 +11,7 @@ module.exports.list = (especie, implant) => {
 
     return Planta
             .find(query)
-            .sort({_id:1})
+            .sort({Freguesia:1})
             .then(resposta => {
                 return resposta
             })
