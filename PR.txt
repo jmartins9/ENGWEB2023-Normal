@@ -1,5 +1,9 @@
 
-1.1 Mudei ID para _id
+1.1 Após análise do dataset fornecido a primeira e única mudança feita foi alterar o nome do campo "Id" para "_id".
+    Depois fiz o seguinte comando no terminal para importar o ficheiro: mongoimport -d plantas -c plantas --file plantas.json --jsonArray.
+    Por fim, entrei na mongo shell para verifcar que o ficheiro foi corretamente importado utilizando os seguintes comandos: 
+     use plantas 
+     db.plantas.find() 
 
 1.2.1 db.plantas.count()  29617
    .2 db.plantas.find({Freguesia : "São Domingos de Rana"}).count()   5903
