@@ -1,1 +1,46 @@
 
+1.1 Mudei ID para _id
+
+1.2.1 db.plantas.count()  29617
+   .2 db.plantas.find({Freguesia : "São Domingos de Rana"}).count()   5903
+   .3 db.plantas.distinct("Freguesia").sort()
+        [
+        '',    
+        'Abóboda',
+        'Alcabideche',
+        'São Domingos de Rana',
+        'U.F. Carcavelos e Parede',
+        'U.F. Cascais e Estoril'
+        ]
+   .4 db.plantas.aggregate([{ $group : { _id : "$Freguesia", registos : { $sum : 1 } } }])
+        [
+        { _id: '', registos: 26 },
+        { _id: 'São Domingos de Rana', registos: 5903 },
+        { _id: 'Alcabideche', registos: 4034 },
+        { _id: 'U.F. Cascais e Estoril', registos: 12023 },
+        { _id: 'Abóboda', registos: 2 },
+        { _id: 'U.F. Carcavelos e Parede', registos: 7629 }
+        ]
+   .5 db.plantas.aggregate([{ $group : { _id : "$Espécie", registos : { $sum : 1 } } }])
+        [
+        { _id: 'catalpa bola', registos: 66 },
+        { _id: 'albizia', registos: 1 },
+        { _id: 'buganvilia', registos: 6 },
+        { _id: 'photinia', registos: 151 },
+        { _id: 'grevilia', registos: 776 },
+        { _id: 'choupo', registos: 145 },
+        { _id: 'sobreiro', registos: 21 },
+        { _id: 'loureiro', registos: 5 },
+        { _id: 'amoreira negra', registos: 7 },
+        { _id: 'ameixeira', registos: 16 },
+        { _id: 'dragoeiro', registos: 48 },
+        { _id: 'melia', registos: 715 },
+        { _id: 'espinheiro da virginia', registos: 93 },
+        { _id: 'washingtonia filifera', registos: 102 },
+        { _id: 'Lodão americano', registos: 1 },
+        { _id: 'medronheiro', registos: 2 },
+        { _id: 'trombeteiro', registos: 1 },
+        { _id: 'abeto branco', registos: 2 },
+        { _id: 'laranjeira', registos: 89 },
+        { _id: 'cipreste comum', registos: 281 }
+        ] 
