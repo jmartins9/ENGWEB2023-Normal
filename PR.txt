@@ -47,4 +47,7 @@
         { _id: 'abeto branco', registos: 2 },
         { _id: 'laranjeira', registos: 89 },
         { _id: 'cipreste comum', registos: 281 }
-        ] 
+        ]
+
+
+Para executar tanto a api como a interface basta apenas realizar os sequintes comanandos na pasta ex1 e ex2: npm install seguido de npm start
