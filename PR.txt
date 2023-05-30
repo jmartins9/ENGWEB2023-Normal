@@ -6,7 +6,9 @@
      db.plantas.find() 
 
 1.2.1 db.plantas.count()  29617
+   
    .2 db.plantas.find({Freguesia : "São Domingos de Rana"}).count()   5903
+   
    .3 db.plantas.distinct("Freguesia").sort()
         [
         '',    
@@ -55,4 +57,7 @@
         ]
 
 
-Para executar tanto a api como a interface basta apenas realizar os sequintes comanandos na pasta ex1 e ex2: npm install seguido de npm start
+1.3 e 2.
+     Para executar tanto a api como a interface basta apenas realizar os sequintes comanandos na pasta ex1 e ex2:
+     npm install --save
+     npm start
